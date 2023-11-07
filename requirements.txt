@@ -15,3 +15,4 @@ DateTime==4.4
 openpyxl==3.0.10
 altair==5.0.0
 streamlit-card==0.0.61
+st-pages==0.4.5
