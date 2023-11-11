@@ -317,10 +317,13 @@ map2.plotly_chart(state_fig, use_container_width=True,theme=None)
 st.write(df[["Name","Purchase_City","Date_Bought","About Me"]])
 
 duck = st.selectbox("Select Duck to get more info: ",df.Name)
-st.write(duck)
+# st.write(duck)
+index = df[df['Name'] == duck].index[0]
 # duck_df = df[["Name","Quantity"]]
 # st.write(duck_df)
-duck_desc = df[df["Name"]==duck]["About Me"][0]
+# duck_desc = df[df["Name"]==duck]["About Me"][0]
+# st.write(index)
+# st.write(df.iloc[index][2])
 # st.write(df[df.Name.str.contains("Fireflighter")])
 duck1,duck2 = st.columns(2)
 with duck1:
@@ -330,16 +333,19 @@ with duck2:
     #     desc = duck_desc_df["About Me"][0]
     # else:
     #     desc = "Nothing Here Yet"
-    st.write("About Me: "+df[df["Name"]==duck]["About Me"][0])
-    st.write("Purchase Method: "+df[df["Name"]==duck]["Purchase_Method"][0])
-    st.write("Purchase Retailer: "+df[df["Name"]==duck]["Purchase_Retailer"][0])
-    if df[df["Name"]==duck]["Purchase_Country"][0]=="USA":
-        st.write("Purchase Details: Bought by "+df[df["Name"]==duck]["Buyer"][0]+" on "+str(df[df["Name"]==duck]["Date_Bought"][0])+" in "+df[df["Name"]==duck]["Purchase_City"][0]+", "+df[df["Name"]==duck]["Purchase_State"][0]+", "+df[df["Name"]==duck]["Purchase_Country"][0])
+    # st.write(df[df['Name'] == duck].index[0])
+
+    
+    st.write("About Me: "+df.iloc[index][11])
+    st.write("Purchase Method: "+df.iloc[index][2])
+    st.write("Purchase Retailer: "+df.iloc[index][3])
+    if df.iloc[index][6]=="USA":
+        st.write("Purchase Details: Bought by "+df.iloc[index][12]+" on "+str(df.iloc[index][8])+" in "+df.iloc[index][4]+", "+df.iloc[index][5]+", "+df.iloc[index][6])
     else:
-        st.write("Purchase Details: Bought by "+df[df["Name"]==duck]["Buyer"][0]+" on "+str(df[df["Name"]==duck]["Date_Bought"][0])+" in "+df[df["Name"]==duck]["Purchase_Country"][0])
-    st.write("Quantity: "+str(df[df["Name"]==duck]["Quantity"][0]))
-    st.write("Weight: "+str(df[df["Name"]==duck]["Total_Weight"][0]))
-    st.write("Dimensions: "+str(df[df["Name"]==duck]["Length"][0])+" cm x "+str(df[df["Name"]==duck]["Width"][0])+" cm x "+str(df[df["Name"]==duck]["Height"][0])+" cm")
+        st.write("Purchase Details: Bought by "+df.iloc[index][12]+" on "+str(df.iloc[index][8])+" in "+df.iloc[index][4]+", "+df.iloc[index][6])
+    st.write("Quantity: "+str(df.iloc[index][13]))
+    st.write("Weight: "+str(df.iloc[index][14]))
+    st.write("Dimensions (L x W x H): "+str(df.iloc[index][17])+" cm x "+str(df.iloc[index][16])+" cm x "+str(df.iloc[index][15])+" cm")
     
 
 # img_nm = "DuckFamily.jpg"    
