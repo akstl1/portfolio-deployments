@@ -18,7 +18,7 @@ import numpy as np
 # from streamlit_card import card
 
 ## read in excel dataset
-df = pd.read_excel("./data/data.xlsx", sheet_name="Ducks")
+df = pd.read_excel("./data/duck_data.xlsx", sheet_name="Ducks")
 
 ## convert date bought col to date, and extract year into a column
 df['Date_Bought'] = pd.to_datetime(df['Date_Bought'],format='%m/%d/%Y').dt.date
@@ -28,7 +28,7 @@ df = df.sort_values(by=['Date_Bought'], ascending=True)
 
 ## find avg weight measure, needed for rows where more than 1 duck is included in the total weight
 df['Avg_Weight'] = np.round(df.Total_Weight/df.Quantity,2)
-
+df["About Me"].fillna("Nothing yet")
 ## transform and create new dfs to find ducks bought by state, country, purchase method, buyer, year, weight, and cumulative weight
 state_df = df.groupby(["Purchase_State"]).agg({"Quantity":"sum"}).reset_index()
 state_df = state_df[state_df["Purchase_State"]!=""]
@@ -314,52 +314,47 @@ map2.plotly_chart(state_fig, use_container_width=True,theme=None)
 ###################### Duck info graphs ##############################
 
 
-st.write(df[["Name","Purchase_City","Purchase_Country","Date_Bought","About Me","Total_Weight","Height","Width","Length"]])
+st.write(df[["Name","Purchase_City","Date_Bought","About Me"]])
 
-# hasClicked = card(
-#   title="Hello World!",
-#   text="Some description",
-#   image="http://placekitten.com/200/300",
-#   url="https://github.com/gamcoh/st-card"
-# )
+duck = st.selectbox("Select Duck to get more info: ",df.Name)
+st.write(duck)
+# duck_df = df[["Name","Quantity"]]
+# st.write(duck_df)
+duck_desc = df[df["Name"]==duck]["About Me"][0]
+# st.write(df[df.Name.str.contains("Fireflighter")])
+duck1,duck2 = st.columns(2)
+with duck1:
+    st.image("./img/DuckFamily.jpg")
+with duck2:
+    # if duck_desc_df["About Me"][0]:
+    #     desc = duck_desc_df["About Me"][0]
+    # else:
+    #     desc = "Nothing Here Yet"
+    st.write("About Me: "+df[df["Name"]==duck]["About Me"][0])
+    st.write("Purchase Method: "+df[df["Name"]==duck]["Purchase_Method"][0])
+    st.write("Purchase Retailer: "+df[df["Name"]==duck]["Purchase_Retailer"][0])
+    if df[df["Name"]==duck]["Purchase_Country"][0]=="USA":
+        st.write("Purchase Details: Bought by "+df[df["Name"]==duck]["Buyer"][0]+" on "+str(df[df["Name"]==duck]["Date_Bought"][0])+" in "+df[df["Name"]==duck]["Purchase_City"][0]+", "+df[df["Name"]==duck]["Purchase_State"][0]+", "+df[df["Name"]==duck]["Purchase_Country"][0])
+    else:
+        st.write("Purchase Details: Bought by "+df[df["Name"]==duck]["Buyer"][0]+" on "+str(df[df["Name"]==duck]["Date_Bought"][0])+" in "+df[df["Name"]==duck]["Purchase_Country"][0])
+    st.write("Quantity: "+str(df[df["Name"]==duck]["Quantity"][0]))
+    st.write("Weight: "+str(df[df["Name"]==duck]["Total_Weight"][0]))
+    st.write("Dimensions: "+str(df[df["Name"]==duck]["Length"][0])+" cm x "+str(df[df["Name"]==duck]["Width"][0])+" cm x "+str(df[df["Name"]==duck]["Height"][0])+" cm")
+    
 
-
-# res = card(
-#     title="Streamlit Card",
-#     text="This is a test card",
-#     image="https://placekitten.com/500/500",
-#     styles={
-#         "card": {
-#             "width": "30%",
-#             "height": "500px",
-#             "border-radius": "60px",
-#             "box-shadow": "0 0 10px rgba(0,0,0,0.5)"
-#         },
-#         "text": {
-#             "font-family": "serif"
-#         }
-#     }
-# )
-
-
-# cols = st.columns(3,gap="small")
-
-# for i, x in enumerate(cols):
-#     x.selectbox(f"Input # {i}",[1,2,3], key=i)
- 
-img_nm = "DuckFamily.jpg"    
-names = [i for i in df['Name']]   
-desc = [i for i in df['About Me']]     
-ducks = len(df['Quantity'])
-n_cols=5
-n_rows=int(1+ducks//n_cols)
-rows = [st.columns(n_cols,gap="small") for _ in range(n_rows)]
-cols = [column for row in rows for column in row]
-st.write(n_rows)
-for col,i,d in zip(cols,names,desc):
-    col.image("./img/DuckFamily.jpg")
-    col.subheader(i)
-    col.write(d)
+# img_nm = "DuckFamily.jpg"    
+# names = [i for i in df['Name']]   
+# desc = [i for i in df['About Me']]     
+# ducks = len(df['Quantity'])
+# n_cols=5
+# n_rows=int(1+ducks//n_cols)
+# rows = [st.columns(n_cols,gap="small") for _ in range(n_rows)]
+# cols = [column for row in rows for column in row]
+# st.write(n_rows)
+# for col,i,d in zip(cols,names,desc):
+#     col.image("./img/DuckFamily.jpg")
+#     col.subheader(i)
+#     col.write(d)
     # with col:
     #     res=card(
     #         title=i,
