@@ -194,7 +194,7 @@ gen3.plotly_chart(three_d_fig, use_container_width=True,theme=None)
 ## bar plot showing number of ducks bought per year 
 
 year_bar = px.bar(yearly_df,x="Year", y="Quantity")
-year_bar.update_layout(title_text="Rubber Ducks Bought Per Year", 
+year_bar.update_layout(title_text="Ducks Bought Per Year", 
                        title_x=0.3,
                        xaxis_title="Purchase Year",
                        yaxis_title="Quantity",
@@ -205,7 +205,7 @@ year_bar.update_layout(title_text="Rubber Ducks Bought Per Year",
 ## bar plot showing number of ducks bought per year, cumulative
 
 year_bar_cumulative = px.line(weight_cum_df,x="Year", y="Quantity")
-year_bar_cumulative.update_layout(title_text="Total Rubber Ducks Owned",
+year_bar_cumulative.update_layout(title_text="Total Ducks Owned",
                                   title_x=0.3,
                                   xaxis_title="Purchase Year", 
                                   yaxis_title="Quantity",
@@ -215,7 +215,7 @@ year_bar_cumulative.update_layout(title_text="Total Rubber Ducks Owned",
 ## bar plot showing weight of ducks bought each year
 
 weight_bar = px.bar(weight_df,x="Year", y="Total_Weight")
-weight_bar.update_layout(title_text="Weight (g) of Annual Purchases",
+weight_bar.update_layout(title_text="Annual Purchase Weight (g)",
                          title_x=0.3,
                          xaxis_title="Purchase Year",
                          yaxis_title="Weight (g)",
