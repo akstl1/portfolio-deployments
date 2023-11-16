@@ -144,7 +144,7 @@ with st.container():
 
 purchase_fig = px.pie(purchase_method_df, values='Quantity', names='Purchase_Method')
 purchase_fig.update_layout(title_text="Purchase Method Distribution",
-                           title_x=0.2,
+                           title_x=0.5,
                            paper_bgcolor="rgb(235,204,52)",
                            plot_bgcolor="rgb(206,212,218)",
                            font=dict(color="black")
@@ -153,7 +153,7 @@ purchase_fig.update_layout(title_text="Purchase Method Distribution",
 
 owner_bar = px.bar(buyer_df,x="Buyer", y="Quantity")
 owner_bar.update_layout(title_text="Rubber Duck Distribution by Purchaser", 
-                        title_x=0.05,
+                        title_x=0.5,
                         xaxis_title="Purchaser", 
                         yaxis_title="Quantity",
                         paper_bgcolor="rgb(235,204,52)",
@@ -172,7 +172,7 @@ three_d_fig = px.scatter_3d(df, x='Length',
                             )
 
 three_d_fig.update_layout(title_text="Rubber Duck Dimensions (cm)",
-                          title_x=0.2,
+                          title_x=0.5,
                           paper_bgcolor="rgb(235,204,52)",
                           plot_bgcolor="rgb(255,0,0)",
                           font=dict(color="black")
