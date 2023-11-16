@@ -89,7 +89,7 @@ ducks_bought_last_year = df[df["Date_Bought"]>=dt.date(today_yr-1,today_month,to
 with st.container():
     col1, col2, col3, col4, col5 = st.columns(5)
     col1.metric("Total Ducks Owned",total_ducks)
-    col2.metric("Ducks Bought Within Last Year",ducks_bought_last_year)
+    col2.metric("Ducks Bought In Last Year",ducks_bought_last_year)
     col3.metric("Duck Collection Weight (g)",duck_weight)
     col4.metric("Unique Countries of Purchase",unique_countries)
     col5.metric("Unique Cities of Purchase",unique_cities)
@@ -441,5 +441,11 @@ css='''
 '''
 st.markdown(f'<style>{css}</style>',unsafe_allow_html=True)
 
-
+# st.markdown("""
+#     <style>
+#     [data-testid=column]:nth-of-type(1) [data-testid=stVerticalBlock]{
+#         gap: 0rem;
+#     }
+#     </style>
+#     """,unsafe_allow_html=True)
 
