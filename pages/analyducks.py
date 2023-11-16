@@ -153,7 +153,7 @@ purchase_fig.update_layout(title_text="Purchase Method Distribution",
 
 owner_bar = px.bar(buyer_df,x="Buyer", y="Quantity")
 owner_bar.update_layout(title_text="Rubber Duck Distribution by Purchaser", 
-                        title_x=0.2,
+                        title_x=0.05,
                         xaxis_title="Purchaser", 
                         yaxis_title="Quantity",
                         paper_bgcolor="rgb(235,204,52)",
@@ -171,7 +171,7 @@ three_d_fig = px.scatter_3d(df, x='Length',
                             labels={'Avg_Weight':'Avg. Weight'}
                             )
 
-three_d_fig.update_layout(title_text="Rubber Duck Length vs Width vs Height (cm)",
+three_d_fig.update_layout(title_text="Rubber Duck Dimensions (cm)",
                           title_x=0.2,
                           paper_bgcolor="rgb(235,204,52)",
                           plot_bgcolor="rgb(255,0,0)",
