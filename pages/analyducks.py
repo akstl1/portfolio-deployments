@@ -40,8 +40,14 @@ weight_df = df.groupby(["Year"]).agg({"Total_Weight":"sum"}).reset_index()
 
 weight_cum_df = df.groupby(['Year']).sum().cumsum().reset_index()
 
+
+
 ## insert a title for the app and instructions
 st.set_page_config(page_title="Analyducks", layout="wide")
+
+with open("./pages/analyducks.css") as source_styling:
+    st.markdown("<style>{source_styling.read()}</style>", unsafe_allow_html=True)
+    
 st.markdown("<h1 style='text-align: center;'>Analyducks</h1>", unsafe_allow_html=True)
 st.markdown("<h4 style='text-align: center;'>A visual analysis of Allan K's rubber duck collection</h1>", unsafe_allow_html=True)
 st.markdown(
@@ -195,7 +201,7 @@ gen3.plotly_chart(three_d_fig, use_container_width=True,theme=None)
 
 year_bar = px.bar(yearly_df,x="Year", y="Quantity")
 year_bar.update_layout(title_text="Ducks Bought Per Year", 
-                       title_x=0.3,
+                       title_x=0.5,
                        xaxis_title="Purchase Year",
                        yaxis_title="Quantity",
                        paper_bgcolor="rgba(0,0,0,0)"
@@ -206,7 +212,7 @@ year_bar.update_layout(title_text="Ducks Bought Per Year",
 
 year_bar_cumulative = px.line(weight_cum_df,x="Year", y="Quantity")
 year_bar_cumulative.update_layout(title_text="Total Ducks Owned",
-                                  title_x=0.3,
+                                  title_x=0.5,
                                   xaxis_title="Purchase Year", 
                                   yaxis_title="Quantity",
                                   paper_bgcolor="rgba(0,0,0,0)"
@@ -216,7 +222,7 @@ year_bar_cumulative.update_layout(title_text="Total Ducks Owned",
 
 weight_bar = px.bar(weight_df,x="Year", y="Total_Weight")
 weight_bar.update_layout(title_text="Annual Purchase Weight (g)",
-                         title_x=0.3,
+                         title_x=0.5,
                          xaxis_title="Purchase Year",
                          yaxis_title="Weight (g)",
                          paper_bgcolor="rgba(0,0,0,0)"
@@ -227,7 +233,7 @@ weight_bar.update_layout(title_text="Annual Purchase Weight (g)",
 
 weight_bar_cumulative = px.line(weight_cum_df,x="Year", y="Total_Weight")
 weight_bar_cumulative.update_layout(title_text="Cumulative Collection Weight (g)",
-                                    title_x=0.3,
+                                    title_x=0.5,
                                     xaxis_title="Purchase Year", 
                                     yaxis_title="Cumulative Weight (g)",
                                     paper_bgcolor="rgba(0,0,0,0)"
@@ -265,7 +271,7 @@ country_fig.update_geos(
     visible=True, resolution=50, scope="world", showcountries=True, countrycolor="Black"
 )
 country_fig.update_geos(projection_type="natural earth")
-country_fig.update_layout(title_text="Rubber Duck Purchase By Country",title_x=0.3,width=1000)
+country_fig.update_layout(title_text="Rubber Duck Purchase By Country",title_x=0.5,width=1000)
 
 ## choropleth showing duck purchase by US state
 
@@ -275,7 +281,7 @@ state_fig = px.choropleth(state_df,locations="Purchase_State",
                           scope="usa"
                         #   color_continuous_scale="YlGn"
                           )
-state_fig.update_layout(title_text="Rubber Duck Purchase By State",title_x=0.3)
+state_fig.update_layout(title_text="Rubber Duck Purchase By State",title_x=0.5)
 state_fig.add_trace(map_fig.data[0])
 
 
@@ -438,8 +444,16 @@ css='''
 #     margin: auto;
 # }
 }
+    
+[class = "st-emotion-cache-ffhzg2"] {
+    background: rgb(53,88,160);
+}
+
 '''
 st.markdown(f'<style>{css}</style>',unsafe_allow_html=True)
+
+
+
 
 # st.markdown("""
 #     <style>
