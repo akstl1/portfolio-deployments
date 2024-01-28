@@ -13,8 +13,8 @@ st.set_page_config(page_title="Analyducks", layout="wide")
 tableName = st.text_input('Enter Previous Table Name:','test')
 # st.write('The current movie title is', tableName)
 
-groupVar = st.text_input("group by var","test")
-prevTable = st.text_input("previous table name","test")
+group_by_table = st.text_input("group by var","test")
+prev_table = st.text_input("previous table name","test")
 firstLast = st.radio(
     "Enter whether to keep First or Last value inputs:",
     ["First", "Last"],
@@ -25,6 +25,10 @@ indexYN = st.radio(
     ["Yes", "No"],
     index=None,
 )
+
+first_part_of_query = '=Table.Group(#\"'+prev_table+'", {"'+group_by_table+'"},{'
+
+st.write(first_part_of_query)
 
 st.write("Final Query Here")
 
