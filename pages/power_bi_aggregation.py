@@ -13,18 +13,18 @@ st.set_page_config(page_title="Analyducks", layout="wide")
 tableName = st.text_input('Enter Previous Table Name:','test')
 # st.write('The current movie title is', tableName)
 
-# groupVar = st.text_input("group by var","test")
-# prevTable = st.text_input("previous table name","test")
-# firstLast = st.radio(
-#     "Enter whether to keep First or Last value inputs:",
-#     ["First", "Last"],
-#     index=None,
-# )
-# indexYN = st.radio(
-#     "Enter whether to add an Index to re-named field:",
-#     ["Yes", "No"],
-#     index=None,
-# )
+groupVar = st.text_input("group by var","test")
+prevTable = st.text_input("previous table name","test")
+firstLast = st.radio(
+    "Enter whether to keep First or Last value inputs:",
+    ["First", "Last"],
+    index=None,
+)
+indexYN = st.radio(
+    "Enter whether to add an Index to re-named field:",
+    ["Yes", "No"],
+    index=None,
+)
 
 st.write("Final Query Here")
 
