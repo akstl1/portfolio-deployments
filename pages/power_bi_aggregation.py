@@ -9,10 +9,12 @@ from datetime import date
 
 import numpy as np
 
-st.set_page_config(page_title="Analyducks", layout="wide")
+st.set_page_config(page_title="BI Aggregation", layout="wide")
 
 tableName = st.text_input('Enter Previous Table Name:','test')
 # st.write('The current movie title is', tableName)
+
+st.title("Power BI Data Aggregation Query Builder")
 
 group_by_table = st.text_input("group by var","test")
 prev_table = st.text_input("previous table name","test")
@@ -63,10 +65,11 @@ if uploaded_file is not None:
 
 first_part_of_query = '=Table.Group(#\"'+prev_table+'", {"'+group_by_table+'"},{'
 
-st.write(first_part_of_query)
-st.write(column_list_string_query)
+# st.write(first_part_of_query)
+# st.write(column_list_string_query)
+st.header("Final Query Here")
+
 st.write(first_part_of_query+column_list_string_query[:-1]+'})')
-st.write("Final Query Here")
 
 
 # app.layout = html.Div([
