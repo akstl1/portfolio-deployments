@@ -26,6 +26,8 @@ indexYN = st.radio(
     index=None,
 )
 
+uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=False)
+
 first = st.text_input(label="test",placeholder="test",label_visibility="hidden")
 
 first_part_of_query = '=Table.Group(#\"'+prev_table+'", {"'+group_by_table+'"},{'
