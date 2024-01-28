@@ -28,7 +28,8 @@ indexYN = st.radio(
 
 uploaded_file = st.file_uploader("Choose a CSV file", accept_multiple_files=False,type=['xlsx','csv','xls'])
 
-dataframe = pd.read_csv(uploaded_file)
+# dataframe = pd.read_csv(uploaded_file)
+
 if uploaded_file is not None:
     dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
