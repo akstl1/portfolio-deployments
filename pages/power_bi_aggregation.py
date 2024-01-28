@@ -13,29 +13,26 @@ st.set_page_config(page_title="BI Aggregation", layout="wide")
 
 st.title("Power BI Data Aggregation Query Builder")
 
-tableName = st.text_input('Enter Previous Table Name:','test')
-# st.write('The current movie title is', tableName)
+prev_table = st.text_input("Enter Previous Table Name:","Pivoted Table")
+
+group_by_table = st.text_input("Enter Variable To Group By:","ProjectID")
+first_last = st.selectbox(
+    'Enter whether to keep First or Last value inputs:',
+    ('First','Last'))
 
 
-group_by_table = st.text_input("group by var","test")
-prev_table = st.text_input("previous table name","test")
-first_last = st.radio(
-    "Enter whether to keep First or Last value inputs:",
-    ["First", "Last"],
-    index=None,
-)
-name_index = st.radio(
-    "Enter whether to add an Index to re-named field:",
-    ["Yes", "No"],
-    index=None,
-)
+name_index = st.selectbox(
+    'Enter whether to add an Index to re-named field:',
+    ('Yes','No'))
 
-uploaded_file = st.file_uploader("Choose a CSV file", accept_multiple_files=False,type=['xlsx','xls','csv'])
 
 column_list_string_query = ''
 
 st.header("Instructions for file upload")
 st.write("To use this aggregation tool please: upload a csv/xlsx file, with the input fields in one column, and a header as the top cell of the column.")
+
+uploaded_file = st.file_uploader("Choose a CSV file", accept_multiple_files=False,type=['xlsx','xls','csv'])
+
 if uploaded_file is not None:
     file_type = uploaded_file.name
     if "xlsx" in file_type or "xls" in file_type:
