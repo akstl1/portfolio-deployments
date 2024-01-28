@@ -27,20 +27,18 @@ indexYN = st.radio(
     index=None,
 )
 
-uploaded_file = st.file_uploader("Choose a CSV file", accept_multiple_files=False)
+uploaded_file = st.file_uploader("Choose a CSV file", accept_multiple_files=False,type=['xlsx','xls','csv'])
 
 # dataframe = pd.read_csv(uploaded_file)
 
 if uploaded_file is not None:
-    type_ = uploaded_file.name
-    st.write(type_)
-    st.write("Success")
-    # dataframe = pd.read_csv(uploaded_file)
-    # st.write(dataframe)
-    # string_data = StringIO.read()
-    # st.write(string_data)
-    dataframe = pd.read_excel(uploaded_file)
+    file_type = uploaded_file.name
+    if "xlsx" in file_type or "xls" in file_type:
+        dataframe = pd.read_excel(uploaded_file)
+    else:
+        dataframe = pd.read_csv(uploaded_file)
     st.write(dataframe)
+    
 
 first = st.text_input(label="test",placeholder="test",label_visibility="hidden")
 
