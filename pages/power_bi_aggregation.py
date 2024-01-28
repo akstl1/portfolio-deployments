@@ -37,8 +37,9 @@ if uploaded_file is not None:
         df = pd.read_csv(uploaded_file)
     column_list_string_query = ''
     # make a df in dict format to access data, and find the relevant col name to search through
-    # df2=df.to_dict()
-    column_name = list(df.columns.values)[0]
+    df2=df.to_dict()
+    # column_name = list(df.columns.values)[0]
+    column_name = list(df2.keys())[0]
     st.write(column_name)
     #for loop to go through each row of the data, transform it to be in the right format for the query, and append to the query string
     for row in range(len(df)):
@@ -50,7 +51,7 @@ if uploaded_file is not None:
             else:
                 datum = df2[column_name][row]
                 column_list_string_query+='{"'+datum+'", each List.'+first_last+'(List.RemoveNulls(['+datum+']))},'
-    st.write(dataframe)
+    st.write(df)
     st.write(column_list_string_query)
 
 
