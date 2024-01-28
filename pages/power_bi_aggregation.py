@@ -48,13 +48,13 @@ if uploaded_file is not None:
     for row in range(len(df)):
         if row>=0:
             if name_index=='Yes':
-                if not first_last:
-                    first_last="Last"
+                # if not first_last:
+                    # first_last="Last"
                 datum = df2[column_name][row]
                 column_list_string_query+='{"'+str(row+1)+'_'+datum+'", each List.'+first_last+'(List.RemoveNulls(['+datum+']))},'
             else:
-                if not first_last:
-                    first_last="Last"
+                # if not first_last:
+                    # first_last="Last"
                 datum = df2[column_name][row]
                 column_list_string_query+='{"'+datum+'", each List.'+first_last+'(List.RemoveNulls(['+datum+']))},'
     # st.write(df)
