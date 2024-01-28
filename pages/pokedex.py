@@ -83,7 +83,7 @@ weight=pokemon_data['height']/10
 
 with col2:
     # st.write("##")
-    st.write("##")
+    # st.write("##")
     st.write("Description: "+ entry)
     st.write("Height: "+str(height)+" m") 
     st.write("Weight: "+str(weight)+" kg")
