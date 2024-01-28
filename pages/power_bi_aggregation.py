@@ -34,6 +34,8 @@ uploaded_file = st.file_uploader("Choose a CSV file", accept_multiple_files=Fals
 
 column_list_string_query = ''
 
+st.header("Instructions for file upload")
+st.write("To use this aggregation tool please: upload a csv/xlsx file, with the input fields in one column, and a header as the top cell of the column.")
 if uploaded_file is not None:
     file_type = uploaded_file.name
     if "xlsx" in file_type or "xls" in file_type:
@@ -45,7 +47,6 @@ if uploaded_file is not None:
     df2=df.to_dict()
     # column_name = list(df.columns.values)[0]
     column_name = list(df2.keys())[0]
-    st.write(column_name)
     #for loop to go through each row of the data, transform it to be in the right format for the query, and append to the query string
     for row in range(len(df)):
         if row>=0:
