@@ -45,16 +45,17 @@ if uploaded_file is not None:
     for row in range(len(df)):
         if row>=0:
             if name_index=='Yes':
-
                 datum = df2[column_name][row]
                 st.write(datum)
                 st.write(column_list_string_query+'a')
                 column_list_string_query+='{"'+str(row+1)+'_'+datum+'", each List.'+first_last+'(List.RemoveNulls(['+datum+']))},'
             else:
                 datum = df2[column_name][row]
+                st.write(datum)
+                st.write(column_list_string_query+'b')
                 column_list_string_query+='{"'+datum+'", each List.'+first_last+'(List.RemoveNulls(['+datum+']))},'
-    st.write(df)
-    st.write(column_list_string_query)
+    # st.write(df)
+    # st.write(column_list_string_query)
 
 
 
