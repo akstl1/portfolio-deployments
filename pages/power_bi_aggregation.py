@@ -29,13 +29,15 @@ name_index = st.radio(
 
 uploaded_file = st.file_uploader("Choose a CSV file", accept_multiple_files=False,type=['xlsx','xls','csv'])
 
+column_list_string_query = ''
+
 if uploaded_file is not None:
     file_type = uploaded_file.name
     if "xlsx" in file_type or "xls" in file_type:
         df = pd.read_excel(uploaded_file)
     else:
         df = pd.read_csv(uploaded_file)
-    column_list_string_query = ''
+    
     # make a df in dict format to access data, and find the relevant col name to search through
     df2=df.to_dict()
     # column_name = list(df.columns.values)[0]
