@@ -11,10 +11,11 @@ import numpy as np
 
 st.set_page_config(page_title="BI Aggregation", layout="wide")
 
+st.title("Power BI Data Aggregation Query Builder")
+
 tableName = st.text_input('Enter Previous Table Name:','test')
 # st.write('The current movie title is', tableName)
 
-st.title("Power BI Data Aggregation Query Builder")
 
 group_by_table = st.text_input("group by var","test")
 prev_table = st.text_input("previous table name","test")
