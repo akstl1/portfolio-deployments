@@ -2,7 +2,7 @@
 import streamlit as st
 import pandas as pd
 import plotly.express as px
-from io import StringIO
+# from io import StringIO
 
 import datetime as dt
 from datetime import date
@@ -32,8 +32,10 @@ uploaded_file = st.file_uploader("Choose a CSV file", accept_multiple_files=Fals
 # dataframe = pd.read_csv(uploaded_file)
 
 if uploaded_file is not None:
-    string_data = StringIO.read()
-    st.write(string_data)
+    dataframe = pd.read_csv(uploaded_file)
+    st.write(dataframe)
+    # string_data = StringIO.read()
+    # st.write(string_data)
     # dataframe = pd.read_csv(uploaded_file)
     # st.write(dataframe)
 
