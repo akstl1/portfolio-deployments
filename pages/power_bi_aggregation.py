@@ -11,9 +11,9 @@ import numpy as np
 st.set_page_config(page_title="Analyducks", layout="wide")
 
 st.write("Power BI Data Aggregation Query Builder")
-st.text_input("previous table name","test")
-st.text_input("group by var","test")
-st.text_input("previous table name","test")
+tableName = st.text_input("previous table name","test")
+groupVar = st.text_input("group by var","test")
+prevTable = st.text_input("previous table name","test")
 firstLast = st.radio(
     "Enter whether to keep First or Last value inputs:",
     ["First", "Last"],
