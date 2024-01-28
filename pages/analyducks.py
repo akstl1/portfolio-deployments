@@ -45,9 +45,16 @@ weight_cum_df = df.groupby(['Year']).sum().cumsum().reset_index()
 ## insert a title for the app and instructions
 st.set_page_config(page_title="Analyducks", layout="wide")
 
-with open("./pages/analyducks.css") as source_styling:
-    st.markdown("<style>{source_styling.read()}</style>", unsafe_allow_html=True)
-    
+with open("./pages/analyducks.css") as f:
+    # st.markdown("<style>{source_styling.read()}</style>", unsafe_allow_html=True)
+    css = f.read()
+
+# with open('./files/wave.css') as f:
+#     css = f.read()
+
+st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
+
+
 st.markdown("<h1 style='text-align: center;'>Analyducks</h1>", unsafe_allow_html=True)
 st.markdown("<h4 style='text-align: center;'>A visual analysis of Allan K's rubber duck collection</h1>", unsafe_allow_html=True)
 st.markdown(
