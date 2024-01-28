@@ -10,9 +10,15 @@ st.set_page_config(page_title="BI Aggregation", layout="wide")
 
 st.title("Power BI Data Aggregation Query Builder")
 st.header("Purpose of this site:")
-st.write("For some of my BI queries, I have to create a custom grouping measure to combine data by one field while taking in the first/last input in each column for that given grouping field. To make this custom grouping call easier I created this site, where I can upload all the column names and information in the applicable dataset and the custom function is generated thereafter. I can then copy paste this output into Power Query quickly to get my desired result.")
+st.write("For some of my BI queries, I have to create a custom grouping measure to combine data by one field while taking in the first or last input in each column with that matching grouping field. To make this custom grouping call easier I created this site, where I can upload all the column names and information in the applicable dataset and the custom function is generated thereafter. I can then copy paste this output into Power Query quickly to get my desired result.")
+st.header("Instructions for BI Query Fields")
+st.write("In the below please enter:")
+st.write("1. the name of the previous step in Power Query Applied Steps")
+st.write("2. Enter whether you would like to record the first or last recorded input for each column")
+st.write("3. Enter whether you would like each newly created column name to include an index")
+st.header("BI Query Input Fields")
 # adding user input fields to input table name, grouping fields, first and last preferene, and index preference
-prev_table = st.text_input("Enter Previous Table Name:","Pivoted Table")
+prev_table = st.text_input("Enter Previous Step Name:","Pivoted Table")
 
 group_by_table = st.text_input("Enter Variable To Group By:","ProjectID")
 first_last = st.selectbox(
@@ -62,6 +68,6 @@ if uploaded_file is not None:
 first_part_of_query = '=Table.Group(#\"'+prev_table+'", {"'+group_by_table+'"},{'
 
 # insert final query header and final query text
-st.header("Final Query Here")
+st.header("Final Query Output")
 
 st.write(first_part_of_query+column_list_string_query[:-1]+'})')
