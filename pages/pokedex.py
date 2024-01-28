@@ -35,7 +35,12 @@ for name in poke_names_request_response['results']:
 
 
 st.header('Pokedex')
-poke_input = st.selectbox("Select a pokemon",poke_names_list)
+
+cola,colb,colc = st.columns([.3,.4,.3])
+with cola:
+    st.write()
+with colb:
+    poke_input = st.selectbox("Select a pokemon",poke_names_list,label_visibility="hidden")
 
 pokemon_species_request = requests.get("https://pokeapi.co/api/v2/pokemon-species/"+str(poke_input)+"/")
 species_data = pokemon_species_request.json()
@@ -45,7 +50,7 @@ pokemon_data = pokemon_request.json()
 
 poke_id=str(species_data['id'])
 
-col1,col2,col3 = st.columns([.3,.2,.5])
+col1,col2 = st.columns([.4,.6])
 
 image = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"+poke_id+".png"
 
@@ -97,5 +102,5 @@ fig.update_yaxes(range=[0, 270])
 fig.update_xaxes(tickangle=45)
 # return fig,{'height':'300px'}  
 
-with col3:
-    st.plotly_chart(fig, use_container_width=True,theme=None)
+
+st.plotly_chart(fig, use_container_width=True,theme=None)
