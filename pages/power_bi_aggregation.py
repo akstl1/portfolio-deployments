@@ -10,8 +10,8 @@ import numpy as np
 
 st.set_page_config(page_title="Analyducks", layout="wide")
 
-st.write("Power BI Data Aggregation Query Builder")
-tableName = st.text_input("previous table name","test")
+st.write('Power BI Data Aggregation Query Builder')
+tableName = st.text_input('previous table name','test')
 groupVar = st.text_input("group by var","test")
 prevTable = st.text_input("previous table name","test")
 firstLast = st.radio(
