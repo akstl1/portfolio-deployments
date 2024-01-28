@@ -16,12 +16,12 @@ tableName = st.text_input('Enter Previous Table Name:','test')
 
 group_by_table = st.text_input("group by var","test")
 prev_table = st.text_input("previous table name","test")
-firstLast = st.radio(
+first_last = st.radio(
     "Enter whether to keep First or Last value inputs:",
     ["First", "Last"],
     index=None,
 )
-indexYN = st.radio(
+name_index = st.radio(
     "Enter whether to add an Index to re-named field:",
     ["Yes", "No"],
     index=None,
@@ -29,18 +29,30 @@ indexYN = st.radio(
 
 uploaded_file = st.file_uploader("Choose a CSV file", accept_multiple_files=False,type=['xlsx','xls','csv'])
 
-# dataframe = pd.read_csv(uploaded_file)
-
 if uploaded_file is not None:
     file_type = uploaded_file.name
     if "xlsx" in file_type or "xls" in file_type:
         dataframe = pd.read_excel(uploaded_file)
     else:
-        dataframe = pd.read_csv(uploaded_file)
-    st.write(dataframe)
-    
+        df = pd.read_csv(uploaded_file)
+    column_list_string_query = ''
+    # make a df in dict format to access data, and find the relevant col name to search through
+    df2=df.to_dict()
+    column_name = list(df2.keys())[0]
+    #for loop to go through each row of the data, transform it to be in the right format for the query, and append to the query string
+    for row in range(len(df)):
+        if row>=0:
+            if name_index=='Yes':
 
-first = st.text_input(label="test",placeholder="test",label_visibility="hidden")
+                datum = df2[column_name][row]
+                column_list_string_query+='{"'+str(row+1)+'_'+datum+'", each List.'+first_last+'(List.RemoveNulls(['+datum+']))},'
+            else:
+                datum = df2[column_name][row]
+                column_list_string_query+='{"'+datum+'", each List.'+first_last+'(List.RemoveNulls(['+datum+']))},'
+    st.write(dataframe)
+    st.write(column_list_string_query)
+
+
 
 first_part_of_query = '=Table.Group(#\"'+prev_table+'", {"'+group_by_table+'"},{'
 
