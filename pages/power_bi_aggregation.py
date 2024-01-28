@@ -9,7 +9,8 @@ import numpy as np
 st.set_page_config(page_title="BI Aggregation", layout="wide")
 
 st.title("Power BI Data Aggregation Query Builder")
-
+st.header("Purpose of this site:")
+st.write("For some of my BI queries, I have to create a custom grouping measure to combine data by one field while taking in the first/last input in each column for that given grouping field. To make this custom grouping call easier I created this site, where I can upload all the column names and information in the applicable dataset and the custom function is generated thereafter. I can then copy paste this output into Power Query quickly to get my desired result.")
 # adding user input fields to input table name, grouping fields, first and last preferene, and index preference
 prev_table = st.text_input("Enter Previous Table Name:","Pivoted Table")
 
