@@ -26,7 +26,10 @@ indexYN = st.radio(
     index=None,
 )
 
-uploaded_files = st.file_uploader("Choose a CSV file", accept_multiple_files=False)
+uploaded_file = st.file_uploader("Choose a CSV file", accept_multiple_files=False,type=['xlsx','csv','xls'])
+
+dataframe = pd.read_csv(uploaded_file)
+st.write(dataframe)
 
 first = st.text_input(label="test",placeholder="test",label_visibility="hidden")
 
