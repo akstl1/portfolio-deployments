@@ -9,7 +9,8 @@ show_pages(
         Page("Welcome.py", "Home", "🏠"),
         Section("Additional Projects", icon="🎈️"),
         Page("pages/analyducks.py", "Analyducks"),
-        Page("pages/pokedex.py", "Pokedex")
+        Page("pages/pokedex.py", "Pokedex"),
+        Page("pages/power_bi_aggregation.py", "BI Aggregation")
         # # Pages after a section will be indented
         # Page("Another page", icon="💪"),
         # # Unless you explicitly say in_section=False
