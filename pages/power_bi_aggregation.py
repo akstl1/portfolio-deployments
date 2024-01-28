@@ -47,6 +47,7 @@ if uploaded_file is not None:
             if name_index=='Yes':
 
                 datum = df2[column_name][row]
+                st.write(datum)
                 column_list_string_query+='{"'+str(row+1)+'_'+datum+'", each List.'+first_last+'(List.RemoveNulls(['+datum+']))},'
             else:
                 datum = df2[column_name][row]
