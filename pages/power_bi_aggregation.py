@@ -38,7 +38,7 @@ if uploaded_file is not None:
     column_list_string_query = ''
     # make a df in dict format to access data, and find the relevant col name to search through
     # df2=df.to_dict()
-    column_name = df.columns[0]
+    column_name = list(df.columns)[0]
     #for loop to go through each row of the data, transform it to be in the right format for the query, and append to the query string
     for row in range(len(df)):
         if row>=0:
