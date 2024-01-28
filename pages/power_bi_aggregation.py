@@ -11,19 +11,19 @@ import numpy as np
 st.set_page_config(page_title="Analyducks", layout="wide")
 
 st.write('Power BI Data Aggregation Query Builder')
-tableName = st.text_input('previous table name','test')
-groupVar = st.text_input("group by var","test")
-prevTable = st.text_input("previous table name","test")
-firstLast = st.radio(
-    "Enter whether to keep First or Last value inputs:",
-    ["First", "Last"],
-    index=None,
-)
-indexYN = st.radio(
-    "Enter whether to add an Index to re-named field:",
-    ["Yes", "No"],
-    index=None,
-)
+# tableName = st.text_input('previous table name','test')
+# groupVar = st.text_input("group by var","test")
+# prevTable = st.text_input("previous table name","test")
+# firstLast = st.radio(
+#     "Enter whether to keep First or Last value inputs:",
+#     ["First", "Last"],
+#     index=None,
+# )
+# indexYN = st.radio(
+#     "Enter whether to add an Index to re-named field:",
+#     ["Yes", "No"],
+#     index=None,
+# )
 
 st.write("Final Query Here")
 
