@@ -65,7 +65,7 @@ first_part_of_query = '=Table.Group(#\"'+prev_table+'", {"'+group_by_table+'"},{
 
 st.write(first_part_of_query)
 st.write(column_list_string_query)
-st.write(column_list_string_query=first_part_of_query+column_list_string_query[:-1]+'})')
+st.write(first_part_of_query+column_list_string_query[:-1]+'})')
 st.write("Final Query Here")
 
 
