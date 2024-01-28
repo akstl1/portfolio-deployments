@@ -56,7 +56,7 @@ image = "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemo
 
 with col1:
     # st.write(species_data)
-    st.write("##")
+    # st.write("##")
     st.image(image)
 
 ## Description callback
@@ -82,7 +82,7 @@ height=pokemon_data['height']/10
 weight=pokemon_data['height']/10
 
 with col2:
-    st.write("##")
+    # st.write("##")
     st.write("##")
     st.write("Description: "+ entry)
     st.write("Height: "+str(height)+" m") 
