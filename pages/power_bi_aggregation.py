@@ -26,7 +26,7 @@ indexYN = st.radio(
     index=None,
 )
 
-uploaded_file = st.file_uploader("Choose a CSV file", accept_multiple_files=False,type=['xlsx','csv','xls'])
+uploaded_file = st.file_uploader("Choose a CSV file", accept_multiple_files=False)
 
 # dataframe = pd.read_csv(uploaded_file)
 
