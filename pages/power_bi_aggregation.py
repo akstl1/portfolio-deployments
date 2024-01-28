@@ -32,7 +32,7 @@ uploaded_file = st.file_uploader("Choose a CSV file", accept_multiple_files=Fals
 if uploaded_file is not None:
     file_type = uploaded_file.name
     if "xlsx" in file_type or "xls" in file_type:
-        dataframe = pd.read_excel(uploaded_file)
+        df = pd.read_excel(uploaded_file)
     else:
         df = pd.read_csv(uploaded_file)
     column_list_string_query = ''
