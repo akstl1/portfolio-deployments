@@ -32,7 +32,7 @@ uploaded_file = st.file_uploader("Choose a CSV file", accept_multiple_files=Fals
 # dataframe = pd.read_csv(uploaded_file)
 
 if uploaded_file is not None:
-    string_data = stringio.read()
+    string_data = StringIO.read()
     st.write(string_data)
     # dataframe = pd.read_csv(uploaded_file)
     # st.write(dataframe)
