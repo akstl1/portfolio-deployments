@@ -48,15 +48,11 @@ if uploaded_file is not None:
                 if not first_last:
                     first_last="Last"
                 datum = df2[column_name][row]
-                st.write(datum)
-                st.write(column_list_string_query+'a')
                 column_list_string_query+='{"'+str(row+1)+'_'+datum+'", each List.'+first_last+'(List.RemoveNulls(['+datum+']))},'
             else:
                 if not first_last:
                     first_last="Last"
                 datum = df2[column_name][row]
-                st.write(datum)
-                st.write(column_list_string_query+'b')
                 column_list_string_query+='{"'+datum+'", each List.'+first_last+'(List.RemoveNulls(['+datum+']))},'
     # st.write(df)
     # st.write(column_list_string_query)
@@ -66,7 +62,8 @@ if uploaded_file is not None:
 first_part_of_query = '=Table.Group(#\"'+prev_table+'", {"'+group_by_table+'"},{'
 
 st.write(first_part_of_query)
-
+st.write(column_list_string_query)
+st.write(column_list_string_query=first_part_of_query+column_list_string_query[:-1]+'})')
 st.write("Final Query Here")
 
 
