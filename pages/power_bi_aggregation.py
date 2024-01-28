@@ -13,7 +13,9 @@ st.set_page_config(page_title="Analyducks", layout="wide")
 st.write('Power BI Data Aggregation Query Builder')
 title = st.text_input('Movie title', 'Life of Brian')
 st.write('The current movie title is', title)
-# tableName = st.text_input('previous table name','test')
+tableName = st.text_input('previous table name','test')
+st.write('The current movie title is', tableName)
+
 # groupVar = st.text_input("group by var","test")
 # prevTable = st.text_input("previous table name","test")
 # firstLast = st.radio(
