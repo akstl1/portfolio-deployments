@@ -37,8 +37,8 @@ if uploaded_file is not None:
     # st.write(dataframe)
     # string_data = StringIO.read()
     # st.write(string_data)
-    # dataframe = pd.read_csv(uploaded_file)
-    # st.write(dataframe)
+    dataframe = pd.read_excel(uploaded_file)
+    st.write(dataframe)
 
 first = st.text_input(label="test",placeholder="test",label_visibility="hidden")
 
