@@ -31,8 +31,10 @@ uploaded_file = st.file_uploader("Choose a CSV file", accept_multiple_files=Fals
 # dataframe = pd.read_csv(uploaded_file)
 
 if uploaded_file is not None:
-    dataframe = pd.read_csv(uploaded_file)
-    st.write(dataframe)
+    bytes_data = uploaded_file.getvalue()
+    st.write(bytes_data)
+    # dataframe = pd.read_csv(uploaded_file)
+    # st.write(dataframe)
 
 first = st.text_input(label="test",placeholder="test",label_visibility="hidden")
 
