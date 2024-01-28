@@ -26,6 +26,8 @@ indexYN = st.radio(
     index=None,
 )
 
+first = st.text_input(placeholder="test")
+
 first_part_of_query = '=Table.Group(#\"'+prev_table+'", {"'+group_by_table+'"},{'
 
 st.write(first_part_of_query)
