@@ -100,7 +100,12 @@ df = pd.DataFrame(stats, columns = ['Stat', 'Base Value'])
 fig = px.bar(df, x="Stat", y="Base Value",text_auto=True)
 fig.update_yaxes(range=[0, 270])
 fig.update_xaxes(tickangle=45)
-# return fig,{'height':'300px'}  
 
+
+fig.update_layout(
+    paper_bgcolor="white",
+    plot_bgcolor="rgb(232,228,227)",
+    font=dict(color="black")
+    )
 
 st.plotly_chart(fig, use_container_width=True,theme=None)
