@@ -14,7 +14,7 @@ with open("./pages/bi_agg.css") as f:
 
 st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
 
-st.title("Power BI Data Aggregation Query Builder")
+st.header("Power BI Data Aggregation Query Builder")
 st.header("Purpose of this project:")
 st.write("For some of my BI queries, I have to create a custom grouping measure to combine data by one field while taking in the first or last input in each column with that matching grouping field. To make this custom grouping call easier I created this site, where I can upload all the column names and information in the applicable dataset and the custom function is generated thereafter. I can then copy paste this output into Power Query quickly to get my desired result.")
 st.header("Instructions for BI Query Fields")
