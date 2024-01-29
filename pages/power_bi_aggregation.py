@@ -8,8 +8,14 @@ import numpy as np
 
 st.set_page_config(page_title="BI Aggregation", layout="wide")
 
+
+with open("./pages/bi_agg.css") as f:
+    css = f.read()
+
+st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
+
 st.title("Power BI Data Aggregation Query Builder")
-st.header("Purpose of this site:")
+st.header("Purpose of this project:")
 st.write("For some of my BI queries, I have to create a custom grouping measure to combine data by one field while taking in the first or last input in each column with that matching grouping field. To make this custom grouping call easier I created this site, where I can upload all the column names and information in the applicable dataset and the custom function is generated thereafter. I can then copy paste this output into Power Query quickly to get my desired result.")
 st.header("Instructions for BI Query Fields")
 st.write("In the below please enter:")
@@ -18,17 +24,20 @@ st.write("2. Enter whether you would like to record the first or last recorded i
 st.write("3. Enter whether you would like each newly created column name to include an index")
 st.header("BI Query Input Fields")
 # adding user input fields to input table name, grouping fields, first and last preferene, and index preference
-prev_table = st.text_input("Enter Previous Step Name:","Pivoted Table")
 
-group_by_table = st.text_input("Enter Variable To Group By:","ProjectID")
-first_last = st.selectbox(
-    'Enter whether to keep First or Last value inputs:',
-    ('First','Last'))
+col1,col2 = st.columns([.4,.6])
+with col1:
+    prev_table = st.text_input("Enter Previous Step Name:","Pivoted Table")
+
+    group_by_table = st.text_input("Enter Variable To Group By:","ProjectID")
+    first_last = st.selectbox(
+        'Enter whether to keep First or Last value inputs:',
+        ('First','Last'))
 
 
-name_index = st.selectbox(
-    'Enter whether to add an Index to re-named field:',
-    ('Yes','No'))
+    name_index = st.selectbox(
+        'Enter whether to add an Index to re-named field:',
+        ('Yes','No'))
 
 # initiating string var needed to compile the final result
 column_list_string_query = ''

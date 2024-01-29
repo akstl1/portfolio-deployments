@@ -1,0 +1,48 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Nov 15 22:02:55 2023
+
+@author: allan
+"""
+
+div.css-st-emotion-cache-ffhzg2 {
+    background: rgb(38 85 181);
+}
+
+.stApp > header {
+    background-color: transparent;
+}
+
+.stApp {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: white;
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    color: black;
+} 
+
+.stHeadingContainer {
+    color: black;
+    /* text-align: center; */
+}
+
+/* .st-emotion-cache-1qg05tj {
+    color: black;
+} */
+
+h2 {
+    color: black;
+}
+
+/* .st-emotion-cache-fplge5 {
+    background: #30a7d7;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    vertical-align: middle;
+    padding-top: 25px;
+    padding-bottom: 25px;
+} */
