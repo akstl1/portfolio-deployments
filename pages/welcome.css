@@ -1,0 +1,90 @@
+# -*- coding: utf-8 -*-
+"""
+Created on Wed Nov 15 22:02:55 2023
+
+@author: allan
+"""
+
+div.css-st-emotion-cache-ffhzg2 {
+    background: rgb(38 85 181);
+}
+
+.st-emotion-cache-1kyxreq {
+    border: 2px solid white;
+    border-radius: 50%;
+    /* width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); */
+}
+
+.st-emotion-cache-1bzkvni {
+    border: 2px solid white;
+    border-radius: 50%;
+    /* width: 300px; */
+    /* height: 300px; */
+    border-radius: 50%;
+    overflow: hidden;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+div.stHeadingContainer {
+    text-align: right;
+}
+
+st-emotion-cache-1v0mbdj > img {
+    border: 2px solid white;
+    border-radius: 50%;
+
+}
+
+.stApp > header {
+    background-color: transparent;
+}
+
+.stApp {
+    margin: auto;
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    overflow: auto;
+    background: black;
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    background-attachment: fixed;
+    color: white;
+} 
+
+.stHeadingContainer {
+    color: black;
+    text-align: center;
+}
+
+/* .st-emotion-cache-1hnhrv2 {
+    background: #30a7d7;
+} */
+
+.st-emotion-cache-1qg05tj {
+    color: white;
+}
+
+.st-emotion-cache-ihe4t4 {
+    color: white;
+}
+
+h2 {
+    color: white;
+}
+
+h1 {
+    color:white;
+}
+
+.st-emotion-cache-fplge5 {
+    background: #30a7d7;
+    padding-left: 10px;
+    padding-right: 10px;
+    border-radius: 10px;
+    vertical-align: middle;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}

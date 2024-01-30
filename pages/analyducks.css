@@ -4,10 +4,14 @@ Created on Wed Nov 15 22:02:55 2023
 
 @author: allan
 """
-
+/* 
 div.css-st-emotion-cache-ffhzg2 {
     background: rgb(38 85 181);
-}
+} */
+/* 
+div.st-emotion-cache-1xw8zd0 {
+    background: green;
+} */
 
 /* .stApp > header {
     background-color: transparent;
@@ -22,3 +26,100 @@ div.css-st-emotion-cache-ffhzg2 {
     background-size: 400% 400%;
     background-attachment: fixed;
 } */
+
+/* .stMetric {
+    color: #212529;
+    background-color: #f8f9fa;
+    width: 75%;
+    margin: auto;
+    padding: 1rem 1rem;
+    border-radius: 0.25rem
+}
+
+.stDataFrameResizable {
+    align-content: center;
+    align-items: center;
+    width: 75%;
+    margin: auto;
+    padding: 1rem 1rem;
+    border-radius: 0.25rem
+}
+
+data-testid:stMetric > div {
+    color: #212529;
+    background-color: #f8f9fa;
+    width: fit-content;
+    margin: auto;
+}
+
+
+data-testid:stMetric label {
+    color: #212529;
+    background-color: #f8f9fa;
+    width: fit-content;
+    margin: auto;
+}
+
+data-testid:stVerticalBlock > .st-emotion-cache-pplk8x e1f1d6gn1 {
+    border: 20px groove red;
+} */
+
+
+/* # [data-testid:block-container {
+#     color: #000000;
+#     background-color: #f8f9fa;
+#     width: fit-content;
+#     margin: auto;
+# }
+
+# [data-testid="stMarkdownContainer"] > div > h1 {
+#     color: #000000;
+#     # background-color: #f8f9fa;
+#     width: fit-content;
+#     margin: auto;
+# }
+
+# [data-testid="stHorizontalBlock"] > div {
+#     color: #000000;
+#     background-color: #f8f9fa;
+#     width: fit-content;
+#     margin: auto;
+# }
+
+
+
+# [data-testid="element-container"] > div  {
+#     # color: #EBCC34;
+#     background-color: #EBCC34;
+#     # width: fit-content;
+#     # margin: auto;
+# }    
+
+# [data-testid="stMetric"] {
+#     color: #212529;
+#     background-color: #f8f9fa;
+#     width: 75%;
+#     margin: auto;
+#     padding: 1rem 1rem;
+#     border-radius: 0.25rem
+# }
+
+# [data-testid="stMetric"] > div {
+#     color: #212529;
+#     background-color: #f8f9fa;
+#     width: fit-content;
+#     margin: auto;
+# }
+
+
+# [data-testid="stMetric"] label {
+#     color: #212529;
+#     background-color: #f8f9fa;
+#     width: fit-content;
+#     margin: auto;
+# }
+} */
+    
+.st-emotion-cache-ffhzg2 {
+    background: rgb(53,88,160);
+}

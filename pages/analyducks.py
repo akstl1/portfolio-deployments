@@ -9,6 +9,8 @@ from datetime import date
 import numpy as np
 # import dash_bootstrap_components as dbc
 
+# with open("./pages/analyducks.css") as f:
+#     css = f.read()
 
 # from streamlit_card import card
 
@@ -46,14 +48,9 @@ weight_cum_df = df.groupby(['Year']).sum().cumsum().reset_index()
 st.set_page_config(page_title="Analyducks", layout="wide")
 
 with open("./pages/analyducks.css") as f:
-    # st.markdown("<style>{source_styling.read()}</style>", unsafe_allow_html=True)
     css = f.read()
 
-# with open('./files/wave.css') as f:
-#     css = f.read()
-
 st.markdown(f'<style>{css}</style>', unsafe_allow_html=True)
-
 
 st.markdown("<h1 style='text-align: center;'>Analyducks</h1>", unsafe_allow_html=True)
 st.markdown("<h4 style='text-align: center;'>A visual analysis of Allan K's rubber duck collection</h1>", unsafe_allow_html=True)
@@ -99,13 +96,13 @@ today_day = today.day
 today_month = today.month
 ducks_bought_last_year = df[df["Date_Bought"]>=dt.date(today_yr-1,today_month,today_day)].Quantity.sum()
 
-with st.container():
-    col1, col2, col3, col4, col5 = st.columns(5)
-    col1.metric("Total Ducks Owned",total_ducks)
-    col2.metric("Ducks Bought In Last Year",ducks_bought_last_year)
-    col3.metric("Duck Collection Weight (g)",duck_weight)
-    col4.metric("Unique Countries of Purchase",unique_countries)
-    col5.metric("Unique Cities of Purchase",unique_cities)
+# with st.container(border=True):
+col1, col2, col3, col4, col5 = st.columns(5)
+col1.metric("Total Ducks Owned",total_ducks)
+col2.metric("Ducks Bought In Last Year",ducks_bought_last_year)
+col3.metric("Duck Collection Weight (g)",duck_weight)
+col4.metric("Unique Countries of Purchase",unique_countries)
+col5.metric("Unique Cities of Purchase",unique_cities)
 
 # css='''
 # [data-testid="stMetric"] {
@@ -232,7 +229,7 @@ weight_bar.update_layout(title_text="Annual Purchase Weight (g)",
                          title_x=0.5,
                          xaxis_title="Purchase Year",
                          yaxis_title="Weight (g)",
-                         paper_bgcolor="rgba(0,0,0,0)"
+                         paper_bgcolor="rgba(0,0,0)"
                          )
 
 
@@ -243,7 +240,7 @@ weight_bar_cumulative.update_layout(title_text="Cumulative Collection Weight (g)
                                     title_x=0.5,
                                     xaxis_title="Purchase Year", 
                                     yaxis_title="Cumulative Weight (g)",
-                                    paper_bgcolor="rgba(0,0,0,0)"
+                                    paper_bgcolor="rgba(0,0,0)"
                                     )
 
 purchase1,purchase2 = st.columns(2)
