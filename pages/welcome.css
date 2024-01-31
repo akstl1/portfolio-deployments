@@ -22,8 +22,8 @@ div.css-st-emotion-cache-ffhzg2 {
 .st-emotion-cache-1bzkvni {
     border: 2px solid white;
     border-radius: 50%;
-    /* width: 300px; */
-    /* height: 300px; */
+    width: 80%;
+    height: 80%;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
@@ -31,6 +31,14 @@ div.css-st-emotion-cache-ffhzg2 {
 
 div.stHeadingContainer {
     text-align: right;
+}
+
+
+h2#data-science-portfolio > div {
+    border-bottom-color: 2px solid white;
+    /* background: blue; */
+    border-bottom: 2 px red;
+    /* border-bottom-color: #30a7d7; */
 }
 
 st-emotion-cache-1v0mbdj > img {
@@ -87,4 +95,27 @@ h1 {
     vertical-align: middle;
     padding-top: 25px;
     padding-bottom: 25px;
+}
+
+/* .st-emotion-cache-ocqkz7.e1f1d6gn5 {
+    background: red;
+} */
+
+.st-emotion-cache-nahz7x > p > a {
+    /* background: red; */
+    text-align: center;
+    text-decoration: none;
+    color:white;
+    /* font-size: 18px; */
+}
+
+.st-emotion-cache-nahz7x > p > a:hover {
+    color: green;
+    text-decoration: none;
+}
+
+
+.st-emotion-cache-1v0mbdj > img {
+    vertical-align: middle;
+    border: 1px solid red;
 }
