@@ -2,6 +2,8 @@ import pandas as pd
 import requests
 import plotly.express as px
 import streamlit as st
+from streamlit_card import card
+
 
 from st_pages import Page, Section, show_pages, add_page_title
 
@@ -17,13 +19,13 @@ with head1:
     st.image("./img/head_pic.jpg")
 
 with head2:
-    st.header("Allan Khariton")
-    st.header("Data Science Portfolio")
-    st.write("I'm a Data Analyst II, and advancing in my career as a data professional. My portfolio focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact and learning new tools & languages. You can view my projects in the posts below, and visit my Github & LinkedIn pages (or download my Resume) by using the links below.")
+    st.header("Allan Khariton - Data Science & Analytics Portfolio")
+    st.write("I'm a Data Analyst II at Edward Jones and specialize in leveraging SQL and Power Platform products to transform existing processes, create efficient new solutions, and shape our analytics strategy. Additionally I am a firm Power BI Champion and spend time mentoring associates, hosting office hours, and shaping our firm standards and BI Community of Practice.")
+    st.write("My portfolio focuses on interesting projects I've recently undertaken, with a strong emphasis on business impact and learning new tools & languages. You can view my projects in the posts below, and visit my Github & LinkedIn pages (or download my Resume) by using the links below.")
 # Specify what pages should be shown in the sidebar, and what their titles and icons
 
 st.write("##")
-link1,link2,link3,link4 = st.columns([.25,.25,.25,.25])
+space1,link1,link2,link3,link4 = st.columns([.3,.17,.17,.17,.17])
 with link1:
     st.write("Rockville, MD")
 with link2:
@@ -41,6 +43,45 @@ with link4:
     st.write( "[Resume](%s)" % url4)
 
     # st.markdown("[![Title](<https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg>)](<https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg>)")
+
+tab1, tab2, tab3, tab4 = st.tabs(["Python - Data Science", "Python - Data Analytics","Power BI", "Tableau"])
+
+with tab1:
+   tab11,tab12,tab13 = st.columns([.33,.33,.33])
+   with tab11:
+    hasClicked = card(
+        title="Hello World!",
+        text="Some description",
+        image="http://placekitten.com/200/300",
+        url="https://github.com/gamcoh/st-card"
+        )
+    
+    with tab12:
+     hasClicked = card(
+        title="Project Coming Soon!",
+        text="Some description",
+        image="http://placekitten.com/200/300",
+        url="https://github.com/gamcoh/st-card"
+        )
+    
+    with tab13:
+     hasClicked = card(
+        title="Another Project!",
+        text="Some description",
+        image="http://placekitten.com/200/300",
+        url="https://github.com/gamcoh/st-card"
+        )
+
+#    st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
+
+with tab2:
+   st.header("Test")
+   
+#    st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
+
+with tab3:
+   st.header("Test")
+#    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
 
 show_pages(
     [

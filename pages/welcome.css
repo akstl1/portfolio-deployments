@@ -30,7 +30,7 @@ div.css-st-emotion-cache-ffhzg2 {
 }
 
 div.stHeadingContainer {
-    text-align: right;
+    text-align: left;
 }
 
 
@@ -101,12 +101,13 @@ h1 {
     background: red;
 } */
 
+
+
 .st-emotion-cache-nahz7x > p > a {
     /* background: red; */
     text-align: center;
     text-decoration: none;
     color:white;
-    /* font-size: 18px; */
 }
 
 .st-emotion-cache-nahz7x > p > a:hover {
@@ -119,3 +120,21 @@ h1 {
     vertical-align: middle;
     border: 1px solid red;
 }
+
+.stTabs [data-baseweb="tab-list"] {
+    gap: 50px;
+}
+/* .stTabs [data-baseweb="tab-list"] {
+		gap: 2px;
+    } */
+
+	.stTabs [data-baseweb="tab"] {
+		height: 50px;
+        width: 30%;
+        white-space: pre-wrap;
+		/* background-color: #F0F2F6; */
+		border-radius: 4px 4px 0px 0px;
+		gap: 1px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+    }
