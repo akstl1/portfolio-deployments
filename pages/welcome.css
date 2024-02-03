@@ -160,6 +160,9 @@ h1 {
     vertical-align:middle;
 }
 
-[class="st-emotion-cache-1bzkvni e1f1d6gn2"] {
-    border: 2px solid green;
+[class="st-emotion-cache-1bzkvni e1f1d6gn2"] > div > div > div >div >div >div >div>img {
+    border: 2px solid white;    
+    overflow: hidden;
+    border-radius: 50%;
+    vertical-align:middle;
 }
