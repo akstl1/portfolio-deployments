@@ -10,8 +10,8 @@ div.css-st-emotion-cache-ffhzg2 {
 }
 
 .st-emotion-cache-1kyxreq {
-    border: 2px solid white;
-    border-radius: 50%;
+    /* border: 2px solid white; */
+    /* border-radius: 50%; */
     /* width: 200px;
     height: 200px;
     border-radius: 50%;
@@ -19,15 +19,15 @@ div.css-st-emotion-cache-ffhzg2 {
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); */
 }
 
-.st-emotion-cache-1bzkvni {
-    border: 2px solid white;
+/* .st-emotion-cache-1bzkvni {
+    border: 4px solid white;
     border-radius: 50%;
     width: 80%;
     height: 80%;
     border-radius: 50%;
     overflow: hidden;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
-}
+} */
 
 div.stHeadingContainer {
     text-align: left;
@@ -37,15 +37,15 @@ div.stHeadingContainer {
 h2#data-science-portfolio > div {
     border-bottom-color: 2px solid white;
     /* background: blue; */
-    border-bottom: 2 px red;
+    /* border-bottom: 2 px red; */
     /* border-bottom-color: #30a7d7; */
 }
 
-st-emotion-cache-1v0mbdj > img {
+/* st-emotion-cache-1v0mbdj > img {
     border: 2px solid white;
     border-radius: 50%;
 
-}
+} */
 
 .stApp > header {
     background-color: transparent;
@@ -111,16 +111,18 @@ h1 {
 }
 
 .st-emotion-cache-nahz7x > p > a:hover {
-    color: green;
+    color: #1ABC9C;
     text-decoration: none;
 }
 
 
 .st-emotion-cache-1v0mbdj > img {
     vertical-align: middle;
-    border: 1px solid red;
+    /* border: 1px solid white; */
 }
 
+
+/* Styling for tabs */
 .stTabs [data-baseweb="tab-list"] {
     gap: 50px;
 }
@@ -130,7 +132,7 @@ h1 {
 
 	.stTabs [data-baseweb="tab"] {
 		height: 50px;
-        width: 30%;
+        width: 25%;
         white-space: pre-wrap;
 		/* background-color: #F0F2F6; */
 		border-radius: 4px 4px 0px 0px;
@@ -138,3 +140,22 @@ h1 {
 		padding-top: 10px;
 		padding-bottom: 10px;
     }
+
+
+
+/* styling cards */
+[data-baseweb="tab-panel"] > div > div > div >div >div >div >div>div> div > div > div >div  >img   {
+    /* border: 1px solid red;     */
+    overflow: hidden;
+    border-radius: 7%;
+    width: 80%;
+    opacity: .8;
+}
+
+/* headshot styling */
+[class="st-emotion-cache-1bzkvni e1f1d6gn3"] > div > div > div >div >div >div >div>img {
+    border: 2px solid white;    
+    overflow: hidden;
+    border-radius: 50%;
+    vertical-align:middle;
+}

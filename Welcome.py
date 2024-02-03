@@ -29,48 +29,52 @@ space1,link1,link2,link3,link4 = st.columns([.3,.17,.17,.17,.17])
 with link1:
     st.write("Rockville, MD")
 with link2:
+    # st.image("./img/github.svg")
     url2 = "https://github.com/akstl1"
     st.write("[Github](%s)" % url2)
 
 with link3:
     url3 = "https://www.linkedin.com/in/allan-khariton/"
+    
     # st.write("[![Title](<https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg>)](<https://www.linkedin.com/in/allan-khariton/>)" "[LinkedIn](%s)" % url3)
+    # st.write("[![Title](<./img/github.svg>)](<https://www.linkedin.com/in/allan-khariton/>)" "[LinkedIn](%s)" % url3)
     st.write("[LinkedIn](%s)" % url3)
 
 with link4:
     url4 = "https://akstl1.github.io/docs/A_Khariton_Resume_2022.08.22.pdf"
     
     st.write( "[Resume](%s)" % url4)
-
+    
     # st.markdown("[![Title](<https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg>)](<https://content.linkedin.com/content/dam/me/business/en-us/amp/brand-site/v2/bg/LI-Bug.svg.original.svg>)")
+# st.image("./img/github.svg")
+# st.markdown('<i class="material-icons">face</i>', unsafe_allow_html=True)
+# st.markdown('<img src="./img/head_pic.jpg" alt="Girl in a jacket" width="500" height="600">', unsafe_allow_html=True)
+
 
 tab1, tab2, tab3, tab4 = st.tabs(["Python - Data Science", "Python - Data Analytics","Power BI", "Tableau"])
-
 with tab1:
-   tab11,tab12,tab13 = st.columns([.33,.33,.33])
+   tab11,tab12,tab13 = st.columns([.30,.30,.30])
    with tab11:
-    hasClicked = card(
-        title="Hello World!",
-        text="Some description",
-        image="http://placekitten.com/200/300",
-        url="https://github.com/gamcoh/st-card"
-        )
+    st.image("./img/head_pic.jpg")
+
     
     with tab12:
-     hasClicked = card(
-        title="Project Coming Soon!",
-        text="Some description",
-        image="http://placekitten.com/200/300",
-        url="https://github.com/gamcoh/st-card"
-        )
+       st.image("./img/head_pic.jpg")
+    #  hasClicked = card(
+    #     title="Project Coming Soon!",
+    #     text="Some description",
+    #     image="http://placekitten.com/200/300",
+    #     url="https://github.com/gamcoh/st-card"
+    #     )
     
     with tab13:
-     hasClicked = card(
-        title="Another Project!",
-        text="Some description",
-        image="http://placekitten.com/200/300",
-        url="https://github.com/gamcoh/st-card"
-        )
+     st.image("./img/head_pic.jpg")
+    #  hasClicked = card(
+    #     title="Another Project!",
+    #     text="Some description",
+    #     image="http://placekitten.com/200/300",
+    #     url="https://github.com/gamcoh/st-card"
+    #     )
 
 #    st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
 
