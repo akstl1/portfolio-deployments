@@ -144,6 +144,14 @@ h1 {
 
 
 /* styling cards */
+
+[data-baseweb="tab-panel"] > div > div > div >div >div >div >div>div> div > div   >img   {
+    /* border: 1px solid red;     */
+    overflow: hidden;
+    border-radius: 7%;
+    width: 80%;
+    opacity: .8;
+}
 [data-baseweb="tab-panel"] > div > div > div >div >div >div >div>div> div > div > div >div  >img   {
     /* border: 1px solid red;     */
     overflow: hidden;
@@ -161,7 +169,7 @@ h1 {
 }
 
 [class="st-emotion-cache-1bzkvni e1f1d6gn2"] > div > div > div >div >div  {
-    border: 5px solid green;    
+    border: 5px solid white;    
     overflow: hidden;
     border-radius: 50%;
     vertical-align:middle;
