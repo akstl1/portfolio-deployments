@@ -116,10 +116,10 @@ h1 {
 }
 
 
-.st-emotion-cache-1v0mbdj > img {
+/* .st-emotion-cache-1v0mbdj > img {
     vertical-align: middle;
-    /* border: 1px solid white; */
-}
+    border: 1px solid white;
+} */
 
 
 /* Styling for tabs */
@@ -130,7 +130,7 @@ h1 {
 		gap: 2px;
     } */
 
-	.stTabs [data-baseweb="tab"] {
+.stTabs [data-baseweb="tab"] {
 		height: 50px;
         width: 25%;
         white-space: pre-wrap;
