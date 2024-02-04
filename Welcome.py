@@ -56,6 +56,7 @@ with tab1:
    tab11,tab12,tab13 = st.columns([.30,.30,.30])
    with tab11:
     st.image("./img/head_pic.jpg")
+    st.subheader("Title")
 
     
     with tab12:

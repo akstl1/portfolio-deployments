@@ -79,13 +79,10 @@ h2#data-science-portfolio > div {
     color: white;
 }
 
-h2 {
+h1, h2, h3 {
     color: white;
 }
 
-h1 {
-    color:white;
-}
 
 .st-emotion-cache-fplge5 {
     background: #30a7d7;
@@ -102,7 +99,7 @@ h1 {
 } */
 
 
-
+/* styling link text ################################################################### */
 .st-emotion-cache-nahz7x > p > a {
     /* background: red; */
     text-align: center;
@@ -115,6 +112,17 @@ h1 {
     text-decoration: none;
 }
 
+.st-emotion-cache-fr27rt > p > a {
+    /* background: red; */
+    text-align: center;
+    text-decoration: none;
+    color:white;
+}
+
+.st-emotion-cache-fr27rt > p > a:hover {
+    color: #1ABC9C;
+    text-decoration: none;
+}
 
 /* .st-emotion-cache-1v0mbdj > img {
     vertical-align: middle;
@@ -122,13 +130,11 @@ h1 {
 } */
 
 
-/* Styling for tabs */
+/* Styling for tabs################################################################### */
 .stTabs [data-baseweb="tab-list"] {
     gap: 50px;
 }
-/* .stTabs [data-baseweb="tab-list"] {
-		gap: 2px;
-    } */
+
 
 .stTabs [data-baseweb="tab"] {
 		height: 50px;
@@ -143,15 +149,18 @@ h1 {
 
 
 
-/* styling cards */
+/* styling cards#################################################################### */ 
 
-[data-baseweb="tab-panel"] > div > div > div >div >div >div >div>div> div > div   >img   {
+/* prod */
+[data-baseweb="tab-panel"] > div > div > div >div >div >div >div>div> div > div >img   {
     /* border: 1px solid red;     */
     overflow: hidden;
     border-radius: 7%;
     width: 80%;
     opacity: .8;
 }
+
+/* local */
 [data-baseweb="tab-panel"] > div > div > div >div >div >div >div>div> div > div > div >div  >img   {
     /* border: 1px solid red;     */
     overflow: hidden;
@@ -160,14 +169,20 @@ h1 {
     opacity: .8;
 }
 
-/* headshot styling */
+/* headshot styling ###############################################################*/
+
+/* local */
 [class="st-emotion-cache-1bzkvni e1f1d6gn3"] > div > div > div >div >div >div >div>img {
     border: 2px solid white;    
     overflow: hidden;
     border-radius: 50%;
     vertical-align:middle;
+    /* height:80%; */
+    /* width: 60%; */
+
 }
 
+/* prod */
 [class="st-emotion-cache-1bzkvni e1f1d6gn2"] > div > div > div >div >div  {
     border: 5px solid white;    
     overflow: hidden;
