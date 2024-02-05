@@ -160,7 +160,7 @@ h1, h2, h3 {
     opacity: .8;
 }
 
-[data-baseweb="tab-panel"] > div > div > div >div >div >div >div>div> div > div >   {
+[data-baseweb="tab-panel"] > div > div > div >div >div >div >div>div> div > div    {
     align-items: center;
     text-align: center;
     border: 1px solid red;
