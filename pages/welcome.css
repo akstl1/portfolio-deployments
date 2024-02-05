@@ -158,6 +158,7 @@ h1, h2, h3 {
     border-radius: 7%;
     width: 80%;
     opacity: .8;
+    align-items: center;
 }
 
 /* local */
@@ -168,6 +169,12 @@ h1, h2, h3 {
     width: 80%;
     opacity: .8;
 }
+
+[data-baseweb="tab-panel"] > div > div > div >div >div >div >div>div> div > div > div >div    {
+    align-items: center;
+    text-align: center;
+}
+
 
 /* headshot styling ###############################################################*/
 

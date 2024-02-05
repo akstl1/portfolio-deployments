@@ -53,14 +53,15 @@ with link4:
 
 tab1, tab2, tab3, tab4 = st.tabs(["Python - Data Science", "Python - Data Analytics","Power BI", "Tableau"])
 with tab1:
-   tab11,tab12,tab13 = st.columns([.30,.30,.30])
+   tab11,tab12 = st.columns([.3,.3])
    with tab11:
     st.image("./img/head_pic.jpg")
-    st.subheader("Title")
+    st.subheader("Heart Disease Classification")
 
     
     with tab12:
        st.image("./img/head_pic.jpg")
+       st.subheader("Parkinson's Verification")
     #  hasClicked = card(
     #     title="Project Coming Soon!",
     #     text="Some description",
@@ -68,8 +69,8 @@ with tab1:
     #     url="https://github.com/gamcoh/st-card"
     #     )
     
-    with tab13:
-     st.image("./img/head_pic.jpg")
+    # with tab13:
+    #  st.image("./img/head_pic.jpg")
     #  hasClicked = card(
     #     title="Another Project!",
     #     text="Some description",
