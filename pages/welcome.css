@@ -163,7 +163,6 @@ h1, h2, h3 {
 [data-baseweb="tab-panel"] > div > div > div >div >div >div >div>div> div > div    {
     align-items: center;
     text-align: center;
-    border: 1px solid red;
 }
 
 /* local */
