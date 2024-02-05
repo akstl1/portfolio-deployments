@@ -4,7 +4,6 @@ import plotly.express as px
 import streamlit as st
 from streamlit_card import card
 
-
 from st_pages import Page, Section, show_pages, add_page_title
 
 st.set_page_config(page_title="Welcome", layout="wide")
@@ -53,13 +52,23 @@ with link4:
 
 tab1, tab2, tab3, tab4 = st.tabs(["Python - Data Science", "Python - Data Analytics","Power BI", "Tableau"])
 with tab1:
-   tab11,tab12 = st.columns([.3,.3])
+   tab11,tab12 = st.columns([.4,.4])
    with tab11:
+    st.write("##")
     st.image("./img/head_pic.jpg")
     st.subheader("Heart Disease Classification")
+    # st.markdown('''
+    # <a href="https://docs.streamlit.io">
+    #     <img src="https://media.tenor.com/images/ac3316998c5a2958f0ee8dfe577d5281/tenor.gif" />
+    # </a>''',
+    # unsafe_allow_html=True
+    # )
+    
+    
 
     
     with tab12:
+       st.write("##")
        st.image("./img/head_pic.jpg")
        st.subheader("Parkinson's Verification")
     #  hasClicked = card(
@@ -95,7 +104,8 @@ show_pages(
         Section("Additional Projects", icon="🎈️"),
         Page("pages/analyducks.py", "Analyducks"),
         Page("pages/pokedex.py", "Pokedex"),
-        Page("pages/power_bi_aggregation.py", "BI Aggregation")
+        Page("pages/power_bi_aggregation.py", "BI Aggregation"),
+        Page("pages/heart_disease.py", "Heart Disease Classification")
         # # Pages after a section will be indented
         # Page("Another page", icon="💪"),
         # # Unless you explicitly say in_section=False

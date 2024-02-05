@@ -153,7 +153,6 @@ h1, h2, h3 {
 
 /* prod */
 [data-baseweb="tab-panel"] > div > div > div >div >div >div >div>div> div > div >img   {
-    /* border: 1px solid red;     */
     overflow: hidden;
     border-radius: 7%;
     width: 80%;
@@ -167,7 +166,6 @@ h1, h2, h3 {
 
 /* local */
 [data-baseweb="tab-panel"] > div > div > div >div >div >div >div>div> div > div > div >div  >img   {
-    /* border: 1px solid red;     */
     overflow: hidden;
     border-radius: 7%;
     width: 80%;
@@ -177,8 +175,18 @@ h1, h2, h3 {
 [data-baseweb="tab-panel"] > div > div > div >div >div >div >div>div> div > div > div >div    {
     align-items: center;
     text-align: center;
+    /* border: 1px solid red; */
 }
 
+[data-baseweb="tab-panel"]    {
+    align-items: center;
+    text-align: center;
+}
+
+.st-emotion-cache-keje6w {
+    border: 1px solid gray;
+    border-radius: 10%;
+}
 
 /* headshot styling ###############################################################*/
 
