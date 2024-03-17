@@ -168,8 +168,10 @@ h1, h2, h3 {
 [data-baseweb="tab-panel"] > div > div > div >div >div >div >div>div> div > div > div >div  >img   {
     overflow: hidden;
     border-radius: 7%;
-    width: 80%;
+    width: 90%;
     opacity: .8;
+    background-position: center;
+    background-size: cover;
 }
 
 [data-baseweb="tab-panel"] > div > div > div >div >div >div >div>div> div > div > div >div    {
@@ -185,7 +187,12 @@ h1, h2, h3 {
 
 .st-emotion-cache-keje6w {
     border: 1px solid gray;
+    background: dimgray;
     border-radius: 10%;
+}
+
+.st-emotion-cache-1v0mbdj {
+    border: 1px solid red;
 }
 
 /* headshot styling ###############################################################*/

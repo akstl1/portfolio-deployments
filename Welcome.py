@@ -6,7 +6,7 @@ from streamlit_card import card
 
 from st_pages import Page, Section, show_pages, add_page_title
 
-st.set_page_config(page_title="Welcome", layout="wide")
+st.set_page_config(page_title="Allan K Data Portfolio", layout="wide")
 
 with open("./pages/welcome.css") as f:
     css = f.read()
@@ -55,7 +55,7 @@ with tab1:
    tab11,tab12 = st.columns([.4,.4])
    with tab11:
     st.write("##")
-    st.image("./img/head_pic.jpg")
+    st.image("./img/heart_disease.jpg")
     st.subheader("Heart Disease Classification")
     # st.markdown('''
     # <a href="https://docs.streamlit.io">
@@ -69,7 +69,7 @@ with tab1:
     
     with tab12:
        st.write("##")
-       st.image("./img/head_pic.jpg")
+       st.image("./img/Park2.jpg")
        st.subheader("Parkinson's Verification")
     #  hasClicked = card(
     #     title="Project Coming Soon!",
