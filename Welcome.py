@@ -78,7 +78,7 @@ with tab1:
     #    st.image("./img/Park2.jpg")
        st.markdown('''
     <a href="/Heart%20Disease%20Classification">
-        <img src="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true" />
+        <img src="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park3.jpg?raw=true" />
     </a>''',
     unsafe_allow_html=True
 )

@@ -164,6 +164,16 @@ h1, h2, h3 {
     text-align: center;
 }
 
+[class="st-emotion-cache-nahz7x e1nzilvr5"] > a > img   {
+    overflow: hidden;
+    border-radius: 7%;
+    width: 90%;
+    opacity: .8;
+    background-position: center;
+    background-size: cover;
+    max-height: 1%;
+}
+
 /* local */
 [data-baseweb="tab-panel"] > div > div > div >div >div >div >div>div> div > div > div >div  >img   {
     overflow: hidden;
