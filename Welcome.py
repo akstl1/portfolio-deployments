@@ -55,7 +55,13 @@ with tab1:
    tab11,tab12 = st.columns([.4,.4])
    with tab11:
     st.write("##")
-    st.image("./img/heart_disease.jpg")
+    st.markdown('''
+    <a href="/Heart%20Disease%20Classification">
+        <img src="https://github.com/akstl1/portfolio-deployments/blob/main/img/heart_disease.jpg?raw=true" />
+    </a>''',
+    unsafe_allow_html=True
+)
+    # st.image("./img/heart_disease.jpg")
     st.subheader("Heart Disease Classification")
     # st.markdown('''
     # <a href="https://docs.streamlit.io">
@@ -69,7 +75,13 @@ with tab1:
     
     with tab12:
        st.write("##")
-       st.image("./img/Park2.jpg")
+    #    st.image("./img/Park2.jpg")
+       st.markdown('''
+    <a href="/Heart%20Disease%20Classification">
+        <img src="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true" />
+    </a>''',
+    unsafe_allow_html=True
+)
        st.subheader("Parkinson's Verification")
     #  hasClicked = card(
     #     title="Project Coming Soon!",
@@ -90,7 +102,13 @@ with tab1:
 #    st.image("https://static.streamlit.io/examples/cat.jpg", width=200)
 
 with tab2:
-   st.header("Test")
+   st.markdown('''
+    <a href="/Pokedex">
+        <img src="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true" />
+    </a>''',
+    unsafe_allow_html=True
+)
+#    st.header("Test")
    
 #    st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
 

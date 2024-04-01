@@ -174,10 +174,23 @@ h1, h2, h3 {
     background-size: cover;
 }
 
-[data-baseweb="tab-panel"] > div > div > div >div >div >div >div>div> div > div > div >div    {
-    align-items: center;
-    text-align: center;
-    /* border: 1px solid red; */
+[data-baseweb="tab-panel"] > div > div > div >div >div >div >div>div> div > div > div >div  >img   {
+    overflow: hidden;
+    border-radius: 7%;
+    width: 90%;
+    opacity: .8;
+    background-position: center;
+    background-size: cover;
+}
+
+[class="st-emotion-cache-uvn0xz e1nzilvr5"] > a > img   {
+    overflow: hidden;
+    border-radius: 7%;
+    width: 90%;
+    opacity: .8;
+    background-position: center;
+    background-size: cover;
+    max-height: 1%;
 }
 
 [data-baseweb="tab-panel"]    {
