@@ -3,6 +3,8 @@ import requests
 import plotly.express as px
 import streamlit as st
 from streamlit_card import card
+from streamlit_card import card
+
 
 from st_pages import Page, Section, show_pages, add_page_title
 
@@ -113,7 +115,52 @@ with tab2:
 #    st.image("https://static.streamlit.io/examples/dog.jpg", width=200)
 
 with tab3:
-   st.header("Test")
+#    st.header("Test")
+
+    names = ['1','2','3']   
+    desc = ['a','b','c']     
+    ducks = 3
+    n_cols=3
+    n_rows=int(1+ducks//n_cols)
+    rows = [st.columns(n_cols,gap="small") for _ in range(n_rows)]
+    cols = [column for row in rows for column in row]
+    st.write(n_rows)
+    for col,i,d in zip(cols,names,desc):
+        # col.image("./img/DuckFamily.jpg")
+        # col.subheader(i)
+        # col.write(d)
+        with col:
+            res=card(
+                title=i,
+                text=d,
+                image="https://github.com/akstl1/portfolio-deployments/blob/main/img/Park2.jpg?raw=true",
+                url="https://github.com/gamcoh/st-card",
+                # on_click=lambda: print("Clicked!"),
+                styles={
+                    "card": {
+                    "width": "100%",
+                    "height": "300px",
+                    "border-radius": "10px",
+                    "padding": "2px",
+                    # "background-color":"red",
+                    "background-clip": "border-box",
+                    "box-shadow": "0 0 0 100px lightgrey",
+                    # "background-image":"red",
+                    # "color":"red"
+                },
+                "text": {
+                    "font-family": "serif"
+                },
+                "title": {
+                    "font-size":"10px"
+                    },
+                "filter": {
+                    "background-color": "rgba(0, 0, 0, .3)"  # <- make the image not dimmed anymore
+            
+        }
+            }
+        )
+
 #    st.image("https://static.streamlit.io/examples/owl.jpg", width=200)
 
 show_pages(
